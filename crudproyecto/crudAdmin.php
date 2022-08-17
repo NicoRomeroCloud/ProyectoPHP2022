@@ -70,13 +70,17 @@ include 'conexionBDD.php'
                 d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z" />
         </symbol>
     </svg>
-    <header class="p-3 bg-dark text-white">
+    <header class="p-3 bg-success text-white">
         <div class="container">
             <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
 
-                <div class="text-end">
+                <div class="text-end"> 
                     
-                    <button type="button"  class="btn btn-warning" onClick="location.href='index.php'">Salir de la sesión</button>
+                    <button type="button"  class="btn btn-warning" onClick="location.href='../index.php'">Volver atrás</button> 
+                    <button type="button"  class="btn btn-warning" onClick="location.href='../logout.php'">Cerrar la sesión</button>
+                    
+                    
+                    <!-- <a href="></a> -->
                 </div>
             </div>
         </div>
@@ -88,43 +92,54 @@ include 'conexionBDD.php'
                 <h1>Base de datos de administradores</h1>
             </div>
             <div class="col-3">
-                <!-- Botón para ELIMINAR una nueva mascota-->
+                <!-- Botón para ELIMINAR un admin-->
 
-                <button type="button" class="btn btn-dark position-relative" data-bs-toggle="modal"
+                <button type="button" class="btn btn-success position-relative" data-bs-toggle="modal"
                     data-bs-target="#eliminarAdmin">
-                    Eliminar administrador <svg width="1em" height="1em" viewBox="0 0 26 26"
-                        class="position-absolute top-100 start-50 translate-middle mt-1 bi bi-caret-down-fill"
-                        fill="#212529" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
-                    </svg>
+                    Eliminar administrador <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-minus" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <circle cx="9" cy="7" r="4" />
+  <path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+  <line x1="16" y1="11" x2="22" y2="11" />
+</svg>
                 </button>
+                <br>
+                <br>
+    <button type="button"  class="btn btn-success" onClick="location.href='../signup.php'">Registrar cuenta de administrador <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg></button>
 
-                <button type="button" class="btn btn-dark position-relative" data-bs-toggle="modal"
+<br>
+<br>
+                <button type="button" class="btn btn-success position-relative" data-bs-toggle="modal"
                     data-bs-target="#editarAdmin">
-                    Editar admin <svg width="1em" height="1em" viewBox="0 0 26 26"
-                        class="position-absolute top-100 start-50 translate-middle mt-1 bi bi-caret-down-fill"
-                        fill="#212529" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
-                    </svg>
+                    Editar admin <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-search" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h1" />
+  <circle cx="16.5" cy="17.5" r="2.5" />
+  <path d="M18.5 19.5l2.5 2.5" />
+</svg>
                 </button>
-                
+                <br>
 
-
+<br>
 
 
                     <!-- FIN ELIMINAR MASCOTA -->
                   <!-- Botón para agregar una nueva mascota-->
-                <button type="button" class="btn btn-dark position-relative" data-bs-toggle="modal"
+                <button type="button" class="btn btn-success position-relative" data-bs-toggle="modal"
                     data-bs-target="#exampleModal">
-                    Agregar Administrador <svg width="1em" height="1em" viewBox="0 0 16 16"
-                        class="position-absolute top-100 start-50 translate-middle mt-1 bi bi-caret-down-fill"
-                        fill="#212529" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
-                    </svg>
+                    Agregar Administrador <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-plus" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <circle cx="9" cy="7" r="4" />
+  <path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+  <path d="M16 11h6m-3 -3v6" />
+</svg>
                 </button>
+                <br>
                 <!-- Modal -->
                   <!-- Tabla para ingresar lo datos de una nueva mascota--> 
                 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
@@ -135,6 +150,7 @@ include 'conexionBDD.php'
                                 <h5 class="modal-title" id="exampleModalLabel">Agregar administrador</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                     aria-label="Close"></button>
+                                    
                             </div>
                             <div class="modal-body">
                                 <!-- Formulario accion="funcion.php" para realizar las tareas, methodo="get, post" importar en la hoja arriba y abajo en action llamo a la funcion-->
@@ -159,10 +175,7 @@ include 'conexionBDD.php'
                                         <label for="apellido_m" class="form-label">APELLIDO MATERNO</label>
                                         <input name="apellido_m" type="text" class="form-control">
                                     </div>
-                                    <div class="mb-3">
-                                        <label for="contrasena" class="form-label">CONTRASEÑA</label>
-                                        <input name="contrasena" type="text" class="form-control">
-                                    </div>
+                                    
 
                             </div>
                             <div class="modal-footer">
@@ -211,7 +224,9 @@ include 'conexionBDD.php'
                                 <h5 class="modal-title" id="exampleModalLabel">Editar admin</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                     aria-label="Close"></button>
+                                    
                             </div>
+                            
                             <div class="modal-body">
                                 <!-- Formulario accion="funcion.php" para realizar las tareas, methodo="get, post" importar en la hoja arriba y abajo en action llamo a la funcion-->
                                 <form method="POST" action="logicaAdmin/editarAdmin.php">
@@ -290,7 +305,7 @@ include 'conexionBDD.php'
 
     <div class="b-example-divider"></div>
 
-    <div class="b-example-divider"></div>
+    <!-- <div class="b-example-divider"></div> -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">

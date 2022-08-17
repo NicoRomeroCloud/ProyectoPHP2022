@@ -70,13 +70,14 @@ include 'conexionBDD.php'
                 d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z" />
         </symbol>
     </svg>
-    <header class="p-3 bg-dark text-white">
+    <header class="p-3 bg-success text-white">
         <div class="container">
             <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
 
                 <div class="text-end">
                     
-                    <button type="button"  class="btn btn-warning" onClick="location.href='index.php'">Salir de la sesión</button>
+                <button type="button"  class="btn btn-warning" onClick="location.href='../index.php'">Volver atrás</button> 
+                    <button type="button"  class="btn btn-warning" onClick="location.href='../logout.php'">Cerrar la sesión</button>
                 </div>
             </div>
         </div>
@@ -90,24 +91,14 @@ include 'conexionBDD.php'
             <div class="col-3">
                 <!-- Botón para ELIMINAR una nueva mascota-->
 
-                <button type="button" class="btn btn-dark position-relative" data-bs-toggle="modal"
+                <button type="button" class="btn btn-success position-relative" data-bs-toggle="modal"
                     data-bs-target="#eliminarAlumno">
-                    Eliminar alumno <svg width="1em" height="1em" viewBox="0 0 26 26"
-                        class="position-absolute top-100 start-50 translate-middle mt-1 bi bi-caret-down-fill"
-                        fill="#212529" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
-                    </svg>
+                    Eliminar alumno 
                 </button>
 
-                <button type="button" class="btn btn-dark position-relative" data-bs-toggle="modal"
+                <button type="button" class="btn btn-success position-relative" data-bs-toggle="modal"
                     data-bs-target="#editarAlumno">
-                    Editar alumno <svg width="1em" height="1em" viewBox="0 0 26 26"
-                        class="position-absolute top-100 start-50 translate-middle mt-1 bi bi-caret-down-fill"
-                        fill="#212529" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
-                    </svg>
+                    Editar alumno 
                 </button>
                 
 
@@ -116,14 +107,9 @@ include 'conexionBDD.php'
 
                     <!-- FIN ELIMINAR MASCOTA -->
                   <!-- Botón para agregar una nueva mascota-->
-                <button type="button" class="btn btn-dark position-relative" data-bs-toggle="modal"
+                <button type="button" class="btn btn-success position-relative" data-bs-toggle="modal"
                     data-bs-target="#exampleModal">
-                    Agregar alumno <svg width="1em" height="1em" viewBox="0 0 16 16"
-                        class="position-absolute top-100 start-50 translate-middle mt-1 bi bi-caret-down-fill"
-                        fill="#212529" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
-                    </svg>
+                    Agregar alumno 
                 </button>
                 <!-- Modal -->
                   <!-- Tabla para ingresar lo datos de una nueva mascota--> 
@@ -159,10 +145,7 @@ include 'conexionBDD.php'
                                         <label for="apellido_m" class="form-label">APELLIDO MATERNO</label>
                                         <input name="apellido_m" type="text" class="form-control">
                                     </div>
-                                    <div class="mb-3">
-                                        <label for="contrasena" class="form-label">CONTRASEÑA</label>
-                                        <input name="contrasena" type="text" class="form-control">
-                                    </div>
+                                    
 
                             </div>
                             <div class="modal-footer">
@@ -235,10 +218,7 @@ include 'conexionBDD.php'
                                         <label for="apellido_m" class="form-label">APELLIDO MATERNO</label>
                                         <input name="apellido_m" type="text" class="form-control">
                                     </div>
-                                    <div class="mb-3">
-                                        <label for="contrasena" class="form-label">CONTRASEÑA</label>
-                                        <input name="contrasena" type="text" class="form-control">
-                                    </div>
+                                    
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
